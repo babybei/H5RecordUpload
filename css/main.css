@@ -1,0 +1,116 @@
+body{
+    background-color: #f2f1ef;
+}
+address, article, aside, b, caption, cite, code, dd, del, details, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, i, input, legend, li, nav, ol, p, pre, section, select, strong, summary, table, tbody, td, textarea, tfoot, th, thead, ul {
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    word-wrap: break-word;
+}
+.tolPage {
+    min-width: 900px;
+    min-height: 100%;
+    width: 1280px;
+    height: auto;
+    font-size: 16px;
+    overflow-y: auto;
+    background-color: #f2f1ef;
+    position: relative;
+    margin: auto;
+}
+.content {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 75px;
+    font-size: 20px;
+    color: #333;
+}
+.content-speak-test .speakContent {
+    margin: 150px auto;
+    text-align: center;
+}
+.content-speak-test .mirophone {
+    display: inline-block;
+    width: 572px;
+    text-align: left;
+    vertical-align: middle;
+}
+.content-speak-test .mirophone li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.content-speak-test .mirophone .mirophoneEnTips {
+    color: #000;
+    font-size: 30px;
+}
+.content-speak-test .mirophone .mirophoneOption {
+    width: 302px;
+    height: 28px;
+}
+.content-speak-test .mirophone .mirophoneChTips {
+    position: relative;
+    width: 572px;
+    height: 28px;
+    color: red;
+    border: 1px solid #c3c0b9;
+}
+.content-speak-test .mirophone .mirophoneOption select {
+    width: 100%;
+    background: #f2f1ef;
+    margin-left: 15px;
+}
+.lightBlue {
+    opacity: .2;
+}
+.record-volume-bar {
+    height: 100%;
+    width: 0;
+    background: #026aae;
+}
+.content-speak-test .mirophone .mirophoneChTips .microphoneTip {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content-speak-test .controlButton {
+    display: inline-block;
+    width: 250px;
+    vertical-align: middle;
+}
+
+.content-speak-test .controlButton li {
+    display: inline-block;
+    margin: 0 0 8px 13px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+    border: 1px solid #000;
+    background: #cfcbc6;
+    cursor: pointer;
+}
+.content-speak-test .controlButton .butBig {
+    width: 138px;
+    height: 30px;
+}
+.content-speak-test .controlButton .butSmall {
+    width: 76px;
+    height: 30px;
+}
+.content-speak-test .controlButton .butInvalid {
+    color: #aba7a2;
+    background: #edecea;
+    border: 1px solid #c3c0b9;
+}
+@media all and (min-width: 10px) {
+    .tolPage {
+        width:auto;
+    }
+}

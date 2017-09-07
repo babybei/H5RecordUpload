@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>H5录音测试</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/audio.css">
+	<style type="text/css">
+		.remoteButton{
+			display:block !important;
+			width: 250px;
+			margin: 0 auto;
+		}
+		.remoteButton ul li{
+			display:inline-block;
+		}
+	</style>
+	<script type="text/javascript" src="lib/require.js"></script>
+	<script type="text/javascript" src="common/js/require_conf.js"></script>
+	<script type="text/javascript" src="js/HZRecorder.js"></script>
+	<script src="js/speaking2.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
+</head>
+<body>
+	<audio id="au-record" controls autoplay style="display: none;"></audio>
+	<input type="hidden" id="hd-audioSrc">
+	<div class="tolPage">
+		<!-- <div class="header">
+			<div class="titleWrap">
+				<span class="headerTitle">Speaking Test</span>
+				<a class="exit">Exit</a>
+			</div>
+		</div> -->
+
+		<div class="speak-content">
+			<div class="content content-speak-test">
+				<div class="speakContent">
+					<div class="mirophone">
+						<ul>
+							<li class="mirophoneEnTips">Select Microphone</li>
+							<li class="mirophoneOption"><select><option>H5WavRecorder</option></select></li>
+							<li class="mirophoneChTips">
+								<div class="record-volume-bar lightBlue"></div>
+								<div class="microphoneTip">您可以测试麦克风了！</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="controlButton">
+						<ul>
+							<li id="recording" class="butBig">Recording</li>
+							<li id="stop" class="butSmall butInvalid">Stop</li>
+							<li id="play" class="butBig butInvalid">Play</li>
+							<li id="retry" class="butSmall butInvalid">Retry</li>
+							<li id="test" class="butSmall butInvalid" style="display:none;">test</li>
+							<li id="saveLocal" class="butSmall butInvalid" style="display:none;">local</li>
+						</ul>
+					</div>
+
+					<div class="controlButton remoteButton">
+						<ul>
+							<li id="upload" class="butSmall butInvalid">Upload</li>
+							<li id="remotePlay" class="butBig butInvalid">Remote Play</li>
+						</ul>
+					</div>
+
+					<!-- 音频播放 -->
+					<div class="audio-tool">
+						<!-- 左侧 -->
+						<audio id="playAudio" src=""></audio>
+						<div class="left-tool">
+							<ul class="play-btn">
+								<li id="play_btn" class="play wg-button stop" title="播放">
+									<span class="wg-button-inner">
+										<a hidefocus="true" class="player-play"></a>
+									</span>
+								</li>
+								<li id="push_btn" class="play wg-button push" style="display: none;" title="暂停">
+									<span class="wg-button-inner">
+										<a hidefocus="true" class="player-pause"></a>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<!-- 右侧 -->
+						<div class="right-panel">
+							<div class="volume" id="volumeWrap">
+								<a class="mute wg-button" style="display:none;" hidefocus="true" title="静音">
+									<span class="wg-button-inner"></span>
+								</a>
+								<a class="muted wg-button" style="display:none;" hidefocus="true" title="静音">
+									<span class="wg-button-inner"></span>
+								</a>
+								<div class="vol-slider-wrapper">
+									<div id="volSlider">
+										<div class="ui-slider-range" style="width:0%; overflow:hidden;">
+											<span class="ui-slider-range-inner"></span>
+										</div>
+										<a class="ui-slider-handle" hidefocus="true" style="left:0%;"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 中间 -->
+						<div class="main-panel">
+							<div class="pane">
+								<time class="time player-current-time">0:00</time>
+								<time class="time player-duration-time">0:00</time>
+								<div class="progress-wrapper" id="progress_bar">
+									<div id="progressSlider" class="ui-slider-horizontal">
+										<!-- 加载进度 -->
+										<div class="player-progress-loaded"></div>
+										<div class="ui-slider-range player-progress-position"></div>
+										<a class="ui-slider-handle player-progress-control" hidefocus="true"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
