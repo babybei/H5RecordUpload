@@ -176,10 +176,8 @@
         	if($tips.length>0){
 	            //record(e.inputBuffer.getChannelData(0));
 	            var input = e.inputBuffer.getChannelData(0);
-	            for(i=0;i<width;i++){
-	                var changeWidth=width/2*input[input.length*i/width|0];
-	                $bar.width(changeWidth);
-	            }
+                var changeWidth=width/2*Math.max.apply(null,input);
+                $bar.width(changeWidth);
         	}
         	//考试录音进度
             if($("#responseTime").length>0){
